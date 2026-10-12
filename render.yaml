@@ -1,0 +1,24 @@
+# Render 一键部署配置（Blueprint）
+# Render 后台用环境变量填 DEEPSEEK_API_KEY / ADMIN_TOKEN（不要写进仓库）
+services:
+  - type: web
+    name: akeeyo-interview
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: PORT
+        value: 10000
+      - key: LLM_PROVIDER
+        value: deepseek
+      - key: DEEPSEEK_MODEL
+        value: deepseek-chat
+      - key: SCORE_MODE
+        value: manual
+      - key: ADMIN_TOKEN
+        sync: false   # 在 Render 后台填
+      - key: DEEPSEEK_API_KEY
+        sync: false   # 在 Render 后台填

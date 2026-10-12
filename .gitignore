@@ -1,0 +1,9 @@
+node_modules/
+.env
+data/
+!data/.gitkeep
+reports/
+sample-report.html
+*.log
+bin/
+.DS_Store

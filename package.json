@@ -1,0 +1,16 @@
+{
+  "name": "akeeyo-interview",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AKEEYO 外贸销售在线数字面试筛选工具",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "start:raw": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^2.0.1"
+  }
+}
